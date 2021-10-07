@@ -1,38 +1,18 @@
 'use strict';
 const title = prompt('Как называется ваш проект', "My project");
-console.log(title);
-let screens = prompt('Какие типы экранов нужно разработать?', "простые, сложные, интерактивные");
-console.log(screens);
-let screenPrice = prompt('Сколько будет стоить данная работа?', 20);
-console.log(screenPrice);
-// необходимо ли переводить число 20 из strict  в number ? в ТЗ этого просто не было
-let rollback = 16;
-let fullPrice = 1000;
-let adaptive = confirm("Нужен ли адаптив на сайте?", true);
-console.log(!!adaptive);
+const screens = prompt('Какие типы экранов нужно разработать?', "простые, сложные, интерактивные");
+const screenPrice = prompt('Сколько будет стоить данная работа?', 20);
+const rollback = 16;
+const adaptive = confirm("Нужен ли адаптив на сайте?", true);
 
-console.log(typeof title);
-console.log(typeof fullPrice);
-console.log(typeof adaptive);
-console.log(screens.length);
-console.log(screenPrice);
-console.log(fullPrice);
-console.log(screens.toLowerCase().split(", "));
-console.log(fullPrice * (rollback / 200));
+const service1 = prompt("Какой дополнительный тип услуги нужен?");
+const servicePrice1 = prompt("Сколько это будет стоить?");
+const service2 = prompt("Какой дополнительный тип услуги нужен?");
+const servicePrice2 = prompt("Сколько это будет стоить?");
 
-let service1 = prompt("Какой дополнительный тип услуги нужен?");
-console.log(service1);
-let servicePrice1 = prompt("Сколько это будет стоить?");
-console.log(servicePrice1);
-let service2 = prompt("Какой дополнительный тип услуги нужен?");
-console.log(service2);
-let servicePrice2 = prompt("Сколько это будет стоить?");
-console.log(servicePrice2);
+const fullPrice = screenPrice + servicePrice1 + servicePrice2;
+const servicePercentPrice = fullPrice - rollback;
 
-fullPrice = screenPrice + servicePrice1 + servicePrice2;
-
-let servicePercentPrice = fullPrice - rollback;
-console.log(Math.ceil(servicePercentPrice));
 
 if (fullPrice > 30000) {
   console.log("скидка 10 %");
@@ -46,6 +26,30 @@ if (0 < fullPrice < 15000) {
 if (fullPrice < 0) {
   console.log("Что то пошло не так");
 }
+
+console.log(service1);
+console.log(servicePrice1);
+console.log(service2);
+console.log(servicePrice2);
+
+console.log(Math.ceil(servicePercentPrice));
+
+console.log(title);
+console.log(screens);
+console.log(screenPrice);
+console.log(!!adaptive);
+
+console.log(typeof title);
+console.log(typeof fullPrice);
+console.log(typeof adaptive);
+console.log(screens.length);
+console.log(screenPrice);
+console.log(fullPrice);
+console.log(screens.toLowerCase().split(", "));
+console.log(fullPrice * (rollback / 200));
+
+
+
 
 
 
