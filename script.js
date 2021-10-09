@@ -9,10 +9,29 @@ const service1 = prompt("Какой дополнительный тип услу
 const servicePrice1 = prompt("Сколько это будет стоить?");
 const service2 = prompt("Какой дополнительный тип услуги нужен?");
 const servicePrice2 = prompt("Сколько это будет стоить?");
-
 const fullPrice = screenPrice + servicePrice1 + servicePrice2;
-const servicePercentPrice = fullPrice - rollback;
 
+
+
+const getAllServicePrices = function (a, b) {
+  return a + b;
+};
+const allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
+console.log(allServicePrices);
+
+
+function getFullPrice() {
+  const fullPrice = screenPrice + allServicePrices;
+}
+getFullPrice();
+console.log(fullPrice);
+
+
+const getServicePercentPrices = function (b, c) {
+  return b - c;
+};
+const servicePercentPrice = getServicePercentPrices(fullPrice, rollback);
+console.log(servicePercentPrice);
 
 if (fullPrice > 30000) {
   console.log("скидка 10 %");
