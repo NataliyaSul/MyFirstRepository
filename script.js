@@ -1,14 +1,4 @@
 'use strict';
-/*let title;
-let screens;
-let str;
-let screenPrice;
-let rollback = 16;
-let adaptive;
-let service1;
-let servicePrice1;
-let service2;
-let servicePrice2;*/
 
 const appData = {
   title: '',
@@ -100,17 +90,8 @@ const appData = {
 
 };
 
-
 appData.start();
-appData.AllServicePrices = appData.getAllServicePrices();
-appData.fullPrice = appData.getFullPrice(appData.screenPrice, appData.AllServicePrices);
-appData.servicePercentPrice = appData.getServicePercentPrices(appData.fullPrice,
-  (appData.fullPrice * (appData.rollback / 100)));
-appData.isNumber();
-appData.getTitle(appData.title);
 
-console.log(appData.fullPrice);
-console.log(appData.servicePercentPrice);
 
 
 
